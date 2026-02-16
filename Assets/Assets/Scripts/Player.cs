@@ -26,7 +26,7 @@ public class Player : MonoBehaviour
         transform.position += move * moveSpeed * Time.deltaTime;
 
         // Проверяем, движется ли персонаж
-        bool isMoving = move.magnitude > 0.01f;     // ← было step → исправлено на move
+        bool isMoving = move.magnitude == 0f;     // ← было step → исправлено на move
 
         // Передаём в аниматор
         animator.SetBool(moveHash, isMoving);
