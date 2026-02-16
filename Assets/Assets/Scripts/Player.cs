@@ -35,7 +35,7 @@ public class Player : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space))
         {
             animator.SetTrigger(jumpHash);
-            move = new Vector3(hor, ver, 12).normalized;
+            move = new Vector3(hor, ver, 100).normalized;
         }
     }
 }
