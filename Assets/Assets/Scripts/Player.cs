@@ -35,7 +35,14 @@ public class Player : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space))
         {
             animator.SetTrigger(jumpHash);
-            move = new Vector3(hor, ver, 100).normalized;
+            jump();
+            
         }
+    }
+
+    public void jump()
+    {
+        GetComponent<Rigidbody2D>().AddForce(new Vector2(0f, 300f));
+        // Логика прыжка (если нужна)
     }
 }
