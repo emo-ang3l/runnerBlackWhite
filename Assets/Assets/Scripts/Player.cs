@@ -20,7 +20,7 @@ public class Player : MonoBehaviour
         float hor = Input.GetAxisRaw("Horizontal");   // Raw — резче и лучше для 2D/платформеров
         float ver = Input.GetAxisRaw("Vertical");
 
-        Vector3 move = new Vector3(hor, ver, 0).normalized; // ← normalized — чтобы диагональ не была быстрее
+        Vector3 move = new Vector3(0, 0, 0).normalized; // ← normalized — чтобы диагональ не была быстрее
 
         // Двигаем персонажа
         transform.position += move * moveSpeed * Time.deltaTime;
