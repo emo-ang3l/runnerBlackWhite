@@ -13,7 +13,13 @@ public class PlayerControl : MonoBehaviour
     [Header("Ground Check")]
     public Transform groundCheck;              // пустой GameObject чуть ниже ног
     public LayerMask groundMask;               // должен включать только слой "Ground"
-    [SerializeField] private float groundRadius = 0.2f;  // обычно 0.1–0.3 хватает
+    [SerializeField] private float groundRadius = 0.2f;
+
+    [Header("Jump")]
+    [SerializeField] private float jumpForce = 300f;   // начальная сила прыжка
+
+    [Header("Upgrade UI")]
+    public GameObject upgradeUI;                       // панель с кнопкой улучшения прыжка
 
     private SpriteRenderer spriteRenderer;
     private Color originalColor;
@@ -34,6 +40,7 @@ public class PlayerControl : MonoBehaviour
 
     private Rigidbody2D rb;
     private bool isGrounded;
+    private bool canUpgrade = true;
 
     void Start()
     {
@@ -47,6 +54,9 @@ public class PlayerControl : MonoBehaviour
 
         if (scoreText != null)
             scoreText.text = "0";
+
+        if (upgradeUI != null)
+            upgradeUI.SetActive(false);
     }
 
     void Update()
@@ -57,7 +67,7 @@ public class PlayerControl : MonoBehaviour
         if (gameOver.activeInHierarchy)
             return;
 
-        // Счёт по времени
+        // Счёт по времени (продолжает идти даже если стоишь)
         gameTime += Time.deltaTime;
         score = gameTime * pointsPerSecond;
         int displayScore = Mathf.FloorToInt(score);
@@ -74,7 +84,29 @@ public class PlayerControl : MonoBehaviour
 
     public void Jump()
     {
-        rb.AddForce(new Vector2(0f, 300f));
+        rb.AddForce(new Vector2(0f, jumpForce));
+    }
+
+    // ─────────────── Улучшение только прыжка ───────────────
+    public void IncreaseJump()
+    {
+        jumpForce += 80f;   // +80 за каждое улучшение (можно поменять значение)
+        HideUpgradeUI();
+    }
+
+    private void ShowUpgradeUI()
+    {
+        if (upgradeUI != null && canUpgrade)
+        {
+            canUpgrade = false;
+            upgradeUI.SetActive(true);
+        }
+    }
+
+    private void HideUpgradeUI()
+    {
+        if (upgradeUI != null)
+            upgradeUI.SetActive(false);
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -96,6 +128,11 @@ public class PlayerControl : MonoBehaviour
             {
                 gameOver.SetActive(true);
             }
+        }
+        else if (collision.CompareTag("Upgrade"))
+        {
+            ShowUpgradeUI();
+            Destroy(collision.gameObject);  // убираем триггер после использования
         }
     }
 
@@ -136,7 +173,6 @@ public class PlayerControl : MonoBehaviour
         spriteRenderer.color = originalColor;
     }
 
-    // Для отладки в сцене (визуализация круга проверки земли)
     void OnDrawGizmosSelected()
     {
         if (groundCheck != null)
