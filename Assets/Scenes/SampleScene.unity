@@ -284,7 +284,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &216338315
 RectTransform:
   m_ObjectHideFlags: 0
@@ -531,7 +531,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 22.671, y: 23}
+  m_AnchoredPosition: {x: 22.67102, y: 23}
   m_SizeDelta: {x: -614.2544, y: -357.8189}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &330780104
@@ -844,7 +844,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -315.342, y: 77.926056}
+  m_AnchoredPosition: {x: -645.34204, y: 299.49448}
   m_SizeDelta: {x: 301.3159, y: 96.1479}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &434344300
@@ -2316,7 +2316,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -415, y: 146.43158}
+  m_AnchoredPosition: {x: -745, y: 368}
   m_SizeDelta: {x: 312.9352, y: 85.7311}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1225399379
@@ -3284,7 +3284,7 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 100
-  m_PresetInfoIsWorld: 0
+  m_PresetInfoIsWorld: 1
 --- !u!223 &1493516226
 Canvas:
   m_ObjectHideFlags: 0
@@ -3345,7 +3345,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 26.4, y: -75.7}
+  m_AnchoredPosition: {x: 367, y: 128}
   m_SizeDelta: {x: 150.2012, y: 47.5574}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1504686027
@@ -3406,7 +3406,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 684395808}
         m_TargetAssemblyTypeName: MenuController, Assembly-CSharp
         m_MethodName: QuitGame
         m_Mode: 1
