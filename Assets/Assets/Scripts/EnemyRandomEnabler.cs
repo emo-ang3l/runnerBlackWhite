@@ -6,12 +6,14 @@ public class EnemyRandomEnabler : MonoBehaviour
     {
         // Находим ВСЕ объекты с тегом Enemy внутри этой сцены/префаба
         GameObject[] enemies = GameObject.FindGameObjectsWithTag("Enemy");
-
-        foreach (var enemy in enemies)
+        while (Time.timeScale != 0f) {
+                    foreach (var enemy in enemies)
         {
             // 50% шанс выключить каждый враг
             enemy.SetActive(Random.value <= 0.79f);
             // ↑ true = включён, false = выключен
+        }    
         }
+
     }
 }
