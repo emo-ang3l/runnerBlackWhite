@@ -65,8 +65,7 @@ public class PlayerControl : MonoBehaviour
             
             if (liveScore <= 0)
             {
-                gameOver.SetActive(true);
-                Time.timeScale = 0f; // Останавливаем игру
+                gameOver.SetActive(true);// Останавливаем игру
             }
         }
     }
