@@ -42,7 +42,6 @@ public class Player : MonoBehaviour
 
     public void jump()
     {
-        GetComponent<Rigidbody2D>().AddForce(new Vector2(0f, 300f));
         // Логика прыжка (если нужна)
     }
 }
