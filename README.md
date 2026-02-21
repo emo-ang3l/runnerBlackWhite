@@ -25,5 +25,6 @@
 1. Три вида локаций
 ![Настройка аккаунта](readmeimage/Places.png)
 2. Тригер улучшающий прыжок
+![Настройка аккаунта](readmeimage/trigger.png)
 3. Ловушка
 ![Настройка аккаунта](readmeimage/Enemy.mov)
