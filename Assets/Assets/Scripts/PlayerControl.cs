@@ -11,7 +11,7 @@ public class PlayerControl : MonoBehaviour
     public AudioClip damageSound;
 
     [Header("Ground Check")]
-    public Transform groundCheck;              // пустой GameObject чуть ниже ног
+    public Transform groundCheck;       // пустой GameObject чуть ниже ног
     public LayerMask groundMask;               // должен включать только слой "Ground"
     [SerializeField] private float groundRadius = 0.2f;
 
