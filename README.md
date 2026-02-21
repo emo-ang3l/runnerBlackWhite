@@ -18,7 +18,7 @@
 2. Склонируй репозиторий:
 
    ```bash
-   git clone https://github.com/emo-ang3l/runnerBlackWhite.git
+   git clone https://github.com/emo-ang3l/runnerAmbience
 
 ## Особенности
 
