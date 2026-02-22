@@ -1,3 +1,9 @@
+<img align="right" width="300" src="https://avatars.mds.yandex.net/i?id=5b3cd3f5ab5d2774458e3e2e79993d581eda6aff-10089679-images-thumbs&n=13">
+
+Тут будет текст слева от картинки.
+
+
+
 # Runner Ambience
 
 Простая 2D endless runner игра на Unity.
